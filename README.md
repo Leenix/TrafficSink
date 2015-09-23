@@ -8,9 +8,9 @@ Use the LuCi configuration interface to add the software you need.
 
 3) Install the following:
 
-    * pyserial
-    * setuptools
-    * git
+* pyserial
+* setuptools
+* git
 
 # Set up the Yun for Serial communication
 
