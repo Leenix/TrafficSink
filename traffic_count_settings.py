@@ -20,6 +20,10 @@ else:
 PACKET_START = '#'
 PACKET_STOP = '$'
 
+HEADINGS = [u'version', u'id', u'event_flag', u'count_pir', u'pir_status', u'count_lidar', u'lidar_range', u'count_uvd',
+            u'uvd_range', u'air_temp', u'case_temp', u'road_temp', u'humidity', u'illuminance', u'current_draw',
+            u'noise', u'timestamp']
+
 
 # Processor Settings ######################################
 
