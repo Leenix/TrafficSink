@@ -51,7 +51,7 @@ Use the LuCi configuration interface to add the software you need.
 
 2) Add the following line to the end of the file (but before exit 0):
     
-    (sleep 10; python /mnt/sda1/TrafficSink/TrafficSink.py)
+    (sleep 10; python /mnt/sda1/TrafficSink/TrafficSink.py &)
 
 # Set up grenade timer
 
