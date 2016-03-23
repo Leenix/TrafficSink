@@ -20,30 +20,29 @@ else:
 PACKET_START = '#'
 PACKET_STOP = '$'
 
-HEADINGS = [u'version', u'id', u'event_flag', u'count_pir', u'pir_status', u'count_lidar', u'lidar_range', u'count_uvd',
+HEADINGS = [u'version', u'id', u'event_flag', u'count_pir', u'pir_status', u'lidar_count', u'lidar_range', u'uvd_count',
             u'uvd_range', u'air_temp', u'case_temp', u'road_temp', u'humidity', u'illuminance', u'current_draw',
-            u'noise', u'timestamp']
+            u'noise']
 
 
 # Processor Settings ######################################
 
 TRAFFIC_KEY_MAP = {
 
-    "count_uvd": "field1",
-    "uvd_range": "field2",
-    "count_pir": "field3",
-    "count_of": "field4",
-    "count_lidar": "field5",
-    "lidar_range": "field6",
+    "count_pir": "field1",
+    "lidar_count": "field2",
+    "uvd_count": "field3",
+    "case_temp": "field4",
+    "road_temp": "field5",
+    "uvd_range": "field6",
+    "humidity": "field7",
+    "illuminance": "field8"
 }
 
 TRAFFIC_CHANNEL_MAP = {
-    "trafficCount": "KY7G0UVNHA25GQ73",
+    "Flauros": "KY7G0UVNHA25GQ73",
 }
 
 
 
 # Uploader Settings #######################################
-
-
-
