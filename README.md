@@ -55,6 +55,8 @@ Instructions can be found in the repo's`README.md` file.
 
 1) Log into the Yun's command line (either through SSH or some other means)
 
+![commandline](images/Clipboard05.png)
+
 2) Navigate to the Yun's SD card folder.
 
     cd /mnt/sda1
