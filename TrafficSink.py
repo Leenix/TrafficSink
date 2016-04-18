@@ -9,7 +9,6 @@ from SinkNode import *
 import sys
 from traffic_count_settings import *
 
-
 if __name__ == '__main__':
     yun_reader = SerialReader(baud_rate=SERIAL_BAUD,
                               port=SERIAL_PORT,
@@ -19,13 +18,18 @@ if __name__ == '__main__':
 
     log_writer = LogFileWriter(filename=log_filename,
                                path="/mnt/sda1/",
-                               formatter=CSVFormatter(headings=HEADINGS),
+                               formatter=CSVFormatter(columns=HEADINGS),
                                file_time_prefix="%Y-%m-%d ",
                                timestamp_format="%Y-%m-%d,%H:%M:%S")
+
+    thingspeak_writer = ThingspeakWriter(writer_id="Flauros",
+                                         api_key="KY7G0UVNHA25GQ73",
+                                         key_map=TRAFFIC_KEY_MAP)
 
     ingestor = SinkNode()
     ingestor.add_reader(yun_reader)
     ingestor.add_logger(log_writer)
+    ingestor.add_logger(thingspeak_writer)
 
     ingestor.start()
 
