@@ -7,7 +7,7 @@ After the Yun has booted (and the white LED is on), you'll need to navigate to t
 In your browser, enter the Yun's address (http://192.168.240.1 or http://arduino.local by default)
 
 You should see the following page:
-![login page](images/Clipboard01.png)
+![login page](images/Clipboard01.jpg)
 
 If you have no changed the login details, the defaults are:
 
@@ -15,10 +15,10 @@ If you have no changed the login details, the defaults are:
     Password: arduino
 
 After logging in, you'll see the following screen:
-![dashboard](images/Clipboard02.png)
+![dashboard](images/Clipboard02.jpg)
 
 Click on `Configure` to get to the next page:
-![almost there](images/Clipboard03.png)
+![almost there](images/Clipboard03.jpg)
 
 Finally, click the link the the `advanced configuration panel (luci)`, and you'll be ready to start installing software.
 
@@ -28,7 +28,7 @@ Use the LuCi configuration interface to add the software you need.
 
 1) Go to the __System > Software__ tab
 
-![software tab](images/Clipboard04.png)
+![software tab](images/Clipboard04.jpg)
 
 2) Hit the `Update lists` button to update the software package list
 
@@ -55,7 +55,7 @@ Instructions can be found in the repo's`README.md` file.
 
 1) Log into the Yun's command line (either through SSH or some other means)
 
-![commandline](images/Clipboard05.png)
+![commandline](images/Clipboard05.jpg)
 
 2) Navigate to the Yun's SD card folder.
 
