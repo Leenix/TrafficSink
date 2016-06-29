@@ -15,7 +15,7 @@ SERIAL_BAUD = 57600
 if _platform == "linux" or _platform == "linux2":
     SERIAL_PORT = "/dev/ttyATH0"
 else:
-    SERIAL_PORT = "COM14"
+    SERIAL_PORT = "COM4"
 
 PACKET_START = '#'
 PACKET_STOP = '$'
@@ -23,6 +23,8 @@ PACKET_STOP = '$'
 HEADINGS = [u'version', u'id', u'event_flag', u'count_pir', u'pir_status', u'lidar_count', u'lidar_range', u'uvd_count',
             u'uvd_range', u'air_temp', u'case_temp', u'road_temp', u'humidity', u'illuminance', u'current_draw',
             u'noise']
+
+BLUETOOTH_HEADINGS = [u'uei', u'name']
 
 
 # Processor Settings ######################################
@@ -40,7 +42,8 @@ TRAFFIC_KEY_MAP = {
 }
 
 TRAFFIC_CHANNEL_MAP = {
-    "Flauros": "KY7G0UVNHA25GQ73",
+    "Flauros":  "KY7G0UVNHA25GQ73",
+    "Pixie":    "KY7G0UVNHA25GQ73",
 }
 
 

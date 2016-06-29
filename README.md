@@ -1,4 +1,10 @@
-# Connect to the Yun
+# What is TrafficSink?
+
+TrafficSink is a Python script for reading and logging sensor data for the [StreetFighter sensor platform project](http://leenix.github.io/StreetFighter_Sensor_Testbed/).
+
+![sensor box](/images/box.jpg)
+
+# Installation Instructions
 
 Your Yun will need to have internet access to install some extra modules. Either connect your Yun with Ethernet or WiFi.
 
@@ -22,7 +28,7 @@ Click on `Configure` to get to the next page:
 
 Finally, click the link the the `advanced configuration panel (luci)`, and you'll be ready to start installing software.
 
-# Installing the Prerequisites
+## Installing the Prerequisites
 
 Use the LuCi configuration interface to add the software you need.
 
@@ -37,7 +43,7 @@ Use the LuCi configuration interface to add the software you need.
 - setuptools
 - git
 
-# Set up the Yun for Serial communication
+## Set up the Yun for Serial communication
 Normally, the high-level Linux half of the Yun communicates to the low-level Arduino half using the `Bridge` library. The problem with this bridge connection is that it's really slow for some reason, probably due to the amount of sanitisation it performs on the text.
 
 If you want to use the Yun to process and store your sensor data, you'll want to disable the default serial system so you can implement your own.
@@ -51,7 +57,7 @@ Download the repository directly to the Yun by entering the following in the Yun
 
 Instructions can be found in the repo's`README.md` file.
 
-# Get the ingestor script
+## Get the ingestor script
 
 1) Log into the Yun's command line (either through SSH or some other means)
 
@@ -71,7 +77,7 @@ Instructions can be found in the repo's`README.md` file.
     cd SinkNode
     python setup.py install
 
-# Automatically run sink script
+## Automatically run sink script
 
 1) Edit the `/etc/rc.local` file by entering:
 
@@ -81,7 +87,7 @@ Instructions can be found in the repo's`README.md` file.
 
     (sleep 10; python /mnt/sda1/TrafficSink/TrafficSink.py &)
 
-# Set up grenade timer
+## Set up grenade timer
 
 The Arduino portion of the Yun is a little less stable than the Linux processor. Add this script in to restart the microcontroller at the start of every day.
 
